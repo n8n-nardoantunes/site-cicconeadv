@@ -1045,5 +1045,20 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
 	</dialog>
 	<!-- #moove_gdpr_cookie_modal -->
 	<!--/copyscapeskip-->
+	<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const removeBadge = () => {
+      const badge = document.querySelector('netlify-badge') || 
+                    document.querySelector('[id*="netlify"]') || 
+                    document.querySelector('iframe[src*="netlify"]');
+      if (badge) {
+        badge.remove();
+      }
+    };
+    removeBadge();
+    setTimeout(removeBadge, 1000);
+    setTimeout(removeBadge, 3000);
+  });
+</script>
 	</body>
 </html>
